@@ -33,7 +33,7 @@ public class ProductService {
 
     public List<ProductEntity> fetch(long maxPrice) {
         if(maxPrice>0){
-            return productRepository.findByPriceLessThan(maxPrice);
+            return productRepository.findByPriceLessThanEqual(maxPrice);
         }
         return productRepository.findAll();
     }
